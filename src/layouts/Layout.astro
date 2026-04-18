@@ -1,23 +1,110 @@
+---
+// Layout.astro - Plantilla base del sitio
+// Se usa en todas las páginas para mantener header y footer consistentes
+const { title } = Astro.props;
+import '../styles/global.css';
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+
+    <!-- HEADER: navegación principal -->
+    <header>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/sobre-mi">Sobre mí</a>
+        <a href="/wordpress">WordPress</a>
+        <a href="/astro-web">Astro Web</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/paso-de-los-toros">Paso de los Toros</a>
+      </nav>
+    </header>
+
+    <!-- SLOT: aquí se inyecta el contenido de cada página -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Néstor Horacio — NH Digital Space</p>
+    </footer>
+
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  /* ============================================
+     DESIGN TOKENS — Paleta NH Digital Space
+     Cambiando aquí, cambia en todo el sitio
+  ============================================ */
+  :root {
+    --color-primary:     #8B1A1A;
+    --color-bg:          #FFFFFF;
+    --color-surface:     #F7F7F7;
+    --color-text:        #1A1A1A;
+    --color-text-soft:   #666666;
+    --color-header:      #1A1A1A;
+  }
+
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  main {
+    flex: 1;
+  }
+
+  /* HEADER — mobile first */
+  header {
+    background: var(--color-header);
+    padding: 1rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;          /* en mobile los links se acomodan en varias filas */
+    justify-content: center;  /* centrado */
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  nav a:hover {
+    color: var(--color-primary);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--color-header);
+    color: var(--color-text-soft);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
+  }
 </style>

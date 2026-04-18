@@ -1,11 +1,43 @@
+
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Inicio | NH Digital Space">
+
+  <!-- SECCIÓN 1: HERO -->
+  <section class="hero">
+    <h1>Hola, soy Néstor Horacio</h1>
+    <p class="subtitulo">Diseñador web freelance especializado en WordPress y Astro.</p>
+    <p class="descripcion">Creo sitios rápidos, modernos y con propósito — desde Paso de los Toros, Uruguay, para el mundo.</p>
+    <a href="/contacto" class="btn">Hablemos de tu proyecto</a>
+  </section>
+
+  <!-- SECCIÓN 2: PORTAFOLIO -->
+  <section class="portfolio">
+    <h2>Proyectos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>jesuseselcamino.uy</h3>
+        <p>Sitio institucional con design system propio y child theme personalizado en WordPress.</p>
+      </div>
+      <div class="card">
+        <h3>nestorhoracio.com</h3>
+        <p>Portfolio personal construido con WordPress y Divi.</p>
+      </div>
+      <div class="card">
+        <h3>NH Digital Space</h3>
+        <p>Este mismo sitio — construido con Astro como ejercicio de aprendizaje y presentación.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: LLAMADA A LA ACCIÓN -->
+  <section class="cta">
+    <h2>¿Necesitás un sitio web?</h2>
+    <p>Contame tu proyecto y te respondo en 24 horas.</p>
+    <a href="/contacto" class="btn">Ir a Contacto</a>
+  </section>
+
 </Layout>
+
