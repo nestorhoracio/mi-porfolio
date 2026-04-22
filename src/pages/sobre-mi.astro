@@ -3,6 +3,129 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Sobre mí | NH Digital Space">
-  <h1>Sobre mí</h1>
-  <p>Soy Néstor Horacio, técnico en redes y diseñador web freelance.</p>
+
+  <section class="sobre-mi">
+
+    <div class="perfil-header">
+      <h1>Néstor Horacio Díaz Duarte</h1>
+      <p class="subtitulo">Diseñador web freelance · Técnico en redes · Paso de los Toros, Uruguay</p>
+      <div class="contacto-rapido">
+        <span>📧 nesthora@gmail.com</span>
+        <span>📞 099 474 094</span>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <h2>Sobre mí</h2>
+      <p>Soy un profesional multidisciplinario con más de 15 años de experiencia en ventas, administración y tecnología. Hoy me dedico al diseño y desarrollo web freelance, combinando mi formación técnica con pasión por crear sitios rápidos, modernos y con propósito.</p>
+    </div>
+
+    <div class="bloque">
+      <h2>Servicios</h2>
+      <ul>
+        <li>Diseño y desarrollo web con WordPress y Divi</li>
+        <li>Sitios estáticos con Astro y HTML5/CSS3</li>
+        <li>Diseño UI/UX con Figma</li>
+      </ul>
+    </div>
+
+    <div class="bloque">
+      <h2>Formación</h2>
+      <ul>
+        <li>Diseño Web con WordPress — IBEC.EDU.UY</li>
+        <li>Diseño Web HTML5 y CSS — IBEC.EDU.UY</li>
+        <li>UI/UX con Figma — Domestika</li>
+        <li>Marketing Digital y Social Media — IBEC.EDU.UY</li>
+        <li>Técnicas Modernas CSS3 — Escuela IT</li>
+              </ul>
+    </div>
+
+    <div class="bloque">
+      <h2>Proyectos</h2>
+      <ul>
+        <li><a href="https://jesuseselcamino.uy" target="_blank">jesuseselcamino.uy</a> — Sitio institucional con design system propio</li>
+        <li><a href="https://nestorhoracio.com" target="_blank">nestorhoracio.com</a> — Portfolio personal</li>
+      </ul>
+    </div>
+
+    <div class="cta-contacto">
+      <p>¿Querés que trabajemos juntos?</p>
+      <a href="/contacto" class="btn">Contactame</a>
+    </div>
+
+  </section>
+
 </Layout>
+
+<style>
+  .sobre-mi {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .perfil-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .perfil-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitulo {
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .contacto-rapido {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--color-text-soft);
+    font-size: 0.9rem;
+  }
+
+  .bloque {
+    margin-bottom: 2rem;
+  }
+
+  .bloque h2 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-surface);
+    padding-bottom: 0.25rem;
+  }
+
+  .bloque ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .bloque ul li::before {
+    content: "→ ";
+    color: var(--color-primary);
+  }
+
+  .bloque a {
+    color: var(--color-primary);
+  }
+
+  .cta-contacto {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-surface);
+    border-radius: 12px;
+    margin-top: 2rem;
+  }
+
+  .cta-contacto p {
+    margin-bottom: 1rem;
+    color: var(--color-text-soft);
+  }
+</style>
