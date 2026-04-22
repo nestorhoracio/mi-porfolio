@@ -4,6 +4,7 @@
 const { title } = Astro.props;
 import '../styles/global.css';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 ---
 
 <!doctype html>
@@ -40,8 +41,19 @@ import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
     <!-- FOOTER -->
     <footer>
-      <p>© 2026 Néstor Horacio — NH Digital Space</p>
-    </footer>
+  <div class="footer-redes">
+    <a href="https://instagram.com/nh_digital_space/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://facebook.com/nhdigitalspace/" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://wa.me/59899474094" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+  <p>© 2026 Néstor Horacio — NH Digital Space</p>
+</footer>
     <button id="theme-toggle">🌙</button>
 <script>
   import '../scripts/app.js';

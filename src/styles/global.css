@@ -259,3 +259,33 @@
      background: #f8d7da;
      color: #721c24;
  }
+
+ .footer-redes {
+     display: flex;
+     justify-content: center;
+     gap: 1.5rem;
+     margin-bottom: 0.75rem;
+ }
+
+ .footer-redes a {
+     font-size: 1.75rem;
+     text-decoration: none;
+     transition: transform 0.2s;
+ }
+
+ .footer-redes a:hover {
+     transform: scale(1.2);
+ }
+
+ /* Colores propios de cada red */
+ .footer-redes a[aria-label="Instagram"] {
+     color: #E1306C;
+ }
+
+ .footer-redes a[aria-label="Facebook"] {
+     color: #1877F2;
+ }
+
+ .footer-redes a[aria-label="WhatsApp"] {
+     color: #25D366;
+ }
