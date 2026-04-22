@@ -24,3 +24,43 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', next);
     themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
 });
+// Formulario de contacto
+const form = document.querySelector('.formulario');
+
+if (form) {
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // evita la recarga
+
+        const data = new FormData(form);
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: data
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                mostrarMensaje('✅ Mensaje enviado. Te respondo en 24 horas.', 'exito');
+                form.reset();
+            } else {
+                mostrarMensaje('❌ Hubo un error. Intentá de nuevo.', 'error');
+            }
+        } catch {
+            mostrarMensaje('❌ Sin conexión. Intentá más tarde.', 'error');
+        }
+    });
+}
+
+function mostrarMensaje(texto, tipo) {
+    const existing = document.querySelector('.form-mensaje');
+    if (existing) existing.remove();
+
+    const msg = document.createElement('p');
+    msg.className = `form-mensaje ${tipo}`;
+    msg.textContent = texto;
+    form.insertAdjacentElement('afterend', msg);
+
+    setTimeout(() => msg.remove(), 5000);
+}

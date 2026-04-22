@@ -3,6 +3,92 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Contacto | NH Digital Space">
-  <h1>Escribeme</h1>
-  <p>Estamos listos para empezar tu web?</p>
+
+  <section class="contacto">
+    <h1>Contacto</h1>
+    <p class="subtitulo">Contame tu proyecto y te respondo en 24 horas.</p>
+
+    <form class="formulario" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="ebae3469-30fa-491c-aef9-a9696de29d7b" />
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+      </div>
+
+      <div class="campo">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+      </div>
+
+      <div class="campo">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="+598 99 000 000" />
+      </div>
+
+      <div class="campo">
+        <label for="proyecto">Descripción del proyecto</label>
+        <textarea id="proyecto" name="proyecto" rows="5" placeholder="Contame brevemente qué necesitás..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Enviar mensaje</button>
+
+    </form>
+  </section>
+
 </Layout>
+
+<style>
+  .contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .contacto h1 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .subtitulo {
+    color: var(--color-text-soft);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  input, textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-text-soft);
+    border-radius: 6px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 1rem;
+    font-family: inherit;
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+
+  textarea {
+    resize: vertical;
+  }
+</style>
