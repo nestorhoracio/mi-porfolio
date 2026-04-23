@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Sobre mí | NH Digital Space">
+<Layout title="Sobre mí | NH Digital Space" description="Conocé a Néstor Horacio Díaz Duarte — diseñador web freelance con más de 15 años de experiencia en tecnología, ventas y desarrollo web.">
 
   <section class="sobre-mi">
 
@@ -43,8 +43,8 @@ import Layout from '../layouts/Layout.astro';
     <div class="bloque">
       <h2>Proyectos</h2>
       <ul>
-        <li><a href="https://jesuseselcamino.uy" target="_blank">jesuseselcamino.uy</a> — Sitio institucional con design system propio</li>
-        <li><a href="https://nestorhoracio.com" target="_blank">nestorhoracio.com</a> — Portfolio personal</li>
+        <li><a href="https://jesuseselcamino.uy" target="_blank" rel="noopener noreferrer">jesuseselcamino.uy</a> — Sitio institucional con design system propio</li>
+        <li><a href="https://nestorhoracio.com" target="_blank" rel="noopener noreferrer">nestorhoracio.com</a> — Portfolio personal</li>
       </ul>
     </div>
 
@@ -74,11 +74,6 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 0.5rem;
   }
 
-  .subtitulo {
-    color: var(--color-primary);
-    margin-bottom: 0.75rem;
-  }
-
   .contacto-rapido {
     display: flex;
     gap: 1.5rem;
@@ -99,17 +94,22 @@ import Layout from '../layouts/Layout.astro';
     border-bottom: 1px solid var(--color-surface);
     padding-bottom: 0.25rem;
   }
+  .bloque p{
+    text-align: center;
+  }
 
   .bloque ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    text-align: center;
   }
 
   .bloque ul li::before {
     content: "→ ";
     color: var(--color-primary);
+    text-align: center;
   }
 
   .bloque a {

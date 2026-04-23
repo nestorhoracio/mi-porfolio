@@ -18,6 +18,12 @@
      box-sizing: border-box;
  }
 
+ :focus-visible {
+     outline: 2px solid var(--color-primary);
+     outline-offset: 3px;
+     border-radius: 3px;
+ }
+
  body {
      min-height: 100vh;
      display: flex;
@@ -152,11 +158,74 @@
      text-align: center;
      background: var(--color-bg);
      border-radius: 12px;
+     padding: 3rem 1.5rem;
+     max-width: 600px;
+     margin: 0 auto;
  }
 
  .cta p {
      color: var(--color-text-soft);
      margin-bottom: 1.5rem;
+ }
+
+ /* Páginas de servicio (WordPress, Astro Web) */
+ .servicio-hero {
+     text-align: center;
+     padding: 4rem 1.5rem 2rem;
+     max-width: 700px;
+     margin: 0 auto;
+ }
+
+ .servicio-hero h1 {
+     font-size: 2rem;
+     margin-bottom: 1rem;
+ }
+
+ .propuesta {
+     color: var(--color-text-soft);
+     font-size: 1.1rem;
+     line-height: 1.6;
+ }
+
+ .servicio-detalle {
+     padding: 2rem 1.5rem;
+     max-width: 900px;
+     margin: 0 auto;
+ }
+
+ .cards-servicios {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 1.5rem;
+ }
+
+ .card-s {
+     background: var(--color-surface);
+     border-radius: 10px;
+     padding: 1.5rem;
+     text-align: center;
+ }
+
+ .icono {
+     font-size: 2rem;
+     display: block;
+     margin-bottom: 0.75rem;
+ }
+
+ .card-s h3 {
+     margin-bottom: 0.5rem;
+     color: var(--color-primary);
+ }
+
+ .card-s p {
+     color: var(--color-text-soft);
+     font-size: 0.95rem;
+ }
+
+ @media (max-width: 767px) {
+     .cards-servicios {
+         grid-template-columns: 1fr;
+     }
  }
 
  img {

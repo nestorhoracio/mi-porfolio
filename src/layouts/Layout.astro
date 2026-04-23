@@ -1,7 +1,5 @@
 ---
-// Layout.astro - Plantilla base del sitio
-// Se usa en todas las páginas para mantener header y footer consistentes
-const { title } = Astro.props;
+const { title, description = 'Diseñador web freelance desde Uruguay. Sitios WordPress y Astro rápidos, modernos y con propósito.' } = Astro.props;
 import '../styles/global.css';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -11,7 +9,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script>
   import { Fancybox } from '@fancyapps/ui';
@@ -27,8 +26,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
     <a href="/" class="logo">
       <img src="/images/nh_digital_space.png" alt="NH Digital Space" />
     </a>
-    <button id="hamburger">☰</button>
-    <nav id="nav-menu">
+    <button id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+    <nav id="nav-menu" aria-label="Navegación principal">
       <a href="/">Inicio</a>
       <a href="/sobre-mi">Sobre mí</a>
       <a href="/wordpress">WordPress</a>
@@ -47,19 +46,19 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
     <!-- FOOTER -->
     <footer>
   <div class="footer-redes">
-    <a href="https://instagram.com/nh_digital_space/" target="_blank" aria-label="Instagram">
+    <a href="https://instagram.com/nh_digital_space/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
       <i class="fab fa-instagram"></i>
     </a>
-    <a href="https://facebook.com/nhdigitalspace/" target="_blank" aria-label="Facebook">
+    <a href="https://facebook.com/nhdigitalspace/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
       <i class="fab fa-facebook"></i>
     </a>
-    <a href="https://wa.me/59899474094" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/59899474094" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
   </div>
   <p>© 2026 Néstor Horacio — NH Digital Space</p>
 </footer>
-    <button id="theme-toggle">🌙</button>
+    <button id="theme-toggle" aria-label="Cambiar tema claro/oscuro">🌙</button>
 <script>
   import '../scripts/app.js';
 </script>

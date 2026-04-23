@@ -4,6 +4,7 @@ const nav = document.getElementById('nav-menu');
 
 hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', nav.classList.contains('active') ? 'true' : 'false');
 });
 
 // Tema claro/oscuro
