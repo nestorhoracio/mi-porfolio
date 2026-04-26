@@ -185,6 +185,10 @@
      margin: 0 auto;
  }
 
+ .cta h2 {
+     margin-bottom: 0.75rem;
+ }
+
  .cta p {
      color: var(--color-text-soft);
      margin-bottom: 1.5rem;

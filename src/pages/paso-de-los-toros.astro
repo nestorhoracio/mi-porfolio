@@ -71,7 +71,7 @@ async function cargarFotos() {
     const fotos = await res.json();
     
     document.getElementById('galeria-fotos').innerHTML = fotos.map(foto => `
-      <a href="${foto.links.html}" target="_blank">
+      <a href="${foto.links.html}" target="_blank" rel="noopener noreferrer">
         <img src="${foto.urls.small}" alt="${foto.alt_description || 'Uruguay'}" />
       </a>
     `).join('');

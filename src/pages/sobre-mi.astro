@@ -10,8 +10,8 @@ import Layout from '../layouts/Layout.astro';
       <h1>Néstor Horacio Díaz Duarte</h1>
       <p class="subtitulo">Diseñador web freelance · Técnico en redes · Paso de los Toros, Uruguay</p>
       <div class="contacto-rapido">
-        <span>📧 nesthora@gmail.com</span>
-        <span>📞 099 474 094</span>
+        <a href="mailto:nesthora@gmail.com">📧 nesthora@gmail.com</a>
+        <a href="tel:+59899474094">📞 099 474 094</a>
       </div>
     </div>
 
@@ -81,6 +81,15 @@ import Layout from '../layouts/Layout.astro';
     flex-wrap: wrap;
     color: var(--color-text-soft);
     font-size: 0.9rem;
+  }
+
+  .contacto-rapido a {
+    color: var(--color-text-soft);
+    text-decoration: none;
+  }
+
+  .contacto-rapido a:hover {
+    color: var(--color-primary);
   }
 
    .cta-contacto {
