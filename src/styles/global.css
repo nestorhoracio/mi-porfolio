@@ -127,6 +127,12 @@
      background: var(--color-text-soft);
  }
 
+ h1 {
+     text-align: center;
+     font-size: 2rem;
+     margin-bottom: 1rem;
+ }
+
  h2 {
      font-size: 1.75rem;
      margin-bottom: 1.5rem;
@@ -220,6 +226,11 @@
  .card-s p {
      color: var(--color-text-soft);
      font-size: 0.95rem;
+ }
+
+ a.card-s {
+     color: var(--color-primary);
+     text-decoration: none;
  }
 
  @media (max-width: 767px) {

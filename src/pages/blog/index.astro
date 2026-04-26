@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+const articulos = await getCollection('blog');
+
+---
+<Layout title="Mi Blog | NH Digital Space">
+  <section>
+    <h1>Mi Blog</h1>
+    <div class="cards-servicios">
+      {articulos.map(articulo => (
+        <a class="card-s" href={`/blog/${articulo.id}`}>
+          {articulo.data.title}
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>
