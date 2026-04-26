@@ -10,8 +10,9 @@ const articulos = await getCollection('blog');
     <div class="cards-servicios">
       {articulos.map(articulo => (
         <a class="card-s" href={`/blog/${articulo.id}`}>
-          {articulo.data.title}
-        </a>
+  {articulo.data.title}
+  <p class="descripcion">{articulo.data.description}</p>
+</a>
       ))}
     </div>
   </section>

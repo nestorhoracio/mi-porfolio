@@ -130,12 +130,17 @@
  h1 {
      text-align: center;
      font-size: 2rem;
-     margin-bottom: 1rem;
+     margin-bottom: 2rem;
  }
 
  h2 {
      font-size: 1.75rem;
      margin-bottom: 1.5rem;
+     text-align: center;
+     color: var(--color-primary);
+ }
+
+ p {
      text-align: center;
  }
 
@@ -158,6 +163,17 @@
  .card p {
      color: var(--color-text-soft);
      font-size: 0.95rem;
+ }
+
+ .card-s {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     gap: 0.75rem;
+     background: var(--color-surface);
+     border-radius: 10px;
+     padding: 1.5rem;
  }
 
  .cta {
@@ -203,13 +219,6 @@
      display: grid;
      grid-template-columns: repeat(2, 1fr);
      gap: 1.5rem;
- }
-
- .card-s {
-     background: var(--color-surface);
-     border-radius: 10px;
-     padding: 1.5rem;
-     text-align: center;
  }
 
  .icono {
@@ -382,4 +391,38 @@
 
  .footer-redes a[aria-label="WhatsApp"] {
      color: #25D366;
+ }
+
+ .bloque {
+     margin-bottom: 2rem;
+ }
+
+ .bloque h2 {
+     font-size: 1.2rem;
+     color: var(--color-primary);
+     margin-bottom: 0.75rem;
+     border-bottom: 1px solid var(--color-surface);
+     padding-bottom: 0.25rem;
+ }
+
+ .bloque p {
+     text-align: center;
+ }
+
+ .bloque ul {
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     gap: 0.4rem;
+     text-align: center;
+ }
+
+ .bloque ul li::before {
+     content: "→ ";
+     color: var(--color-primary);
+     text-align: center;
+ }
+
+ .bloque a {
+     color: var(--color-primary);
  }
